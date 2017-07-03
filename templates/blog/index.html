@@ -7,6 +7,9 @@
             <header class="entry-header">
                 <h1 class="entry-title">
                     <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+                    <!--我们把 a 标签的 href 属性的值改成了 {{ post.get_absolute_url }}。
+                    回顾一下模板变量的用法，由于 get_absolute_url 这个方法（我们定义在 Post 类中的）返回的是 post 对应的 URL，
+                    因此这里 {{ post.get_absolute_url }} 最终会被替换成该 post 自身的 URL。-->
                 </h1>
                 <div class="entry-meta">
                     <span class="post-category"><a href="#">{{ post.category.name }}</a></span>
