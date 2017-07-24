@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% for img in imgs %}
+    <img src='{{ img.img.url }}' />
+{% empty %}
+        <div class="no-post">暂时还没有图片！</div>
+    {% endfor %}
+</body>
+</html>
