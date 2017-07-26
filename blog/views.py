@@ -77,12 +77,3 @@ def search(request):
     post_list = Post.objects.filter(title__icontains=q)
     return render(request, 'blog/index.html', {'error_msg':error_msg,
                                                 'post_list':post_list})
-
-def qiubai(request):
-    #c1=Category.objects.create(name='qiubai')
-    #t1=Tag.objects.create(name='qiubai')
-    PostObj = Post.objects.create(id='100',
-                                 title='321',
-                                  body='123',
-                                  )
-    return HttpResponse('yes')

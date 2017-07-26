@@ -27,8 +27,8 @@ class Post(models.Model):
     title = models.CharField(max_length=70)
     body = models.TextField() #存储大段文本
 
-    created_time = models.DateTimeField()
-    modified_time = models.DateTimeField()
+    created_time = models.DateTimeField(auto_now_add=True)
+    modified_time = models.DateTimeField(auto_now_add=True)
 
     #摘要，可以为空
     excerpt = models.CharField(max_length=200, blank=True)
