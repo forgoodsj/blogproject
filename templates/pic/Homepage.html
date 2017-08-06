@@ -1,0 +1,266 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="/static/pic/css/style.css">
+<title></title>
+</head>
+<body>
+	<div class="header">
+		<div class="top">
+			<div class="wp">
+				<div class="z">
+					<span>
+						<a href="">设为首页</a>
+					</span>
+					<span>
+						<a href="">收藏本站</a>
+					</span>
+				</div>
+				<div class="y">
+					<span>2015年5月1日</span>
+					<span class="mr_0">多云16℃/30℃</span>
+				</div>
+			</div>
+		</div>
+		<div class="wp">
+			<div class="logos">
+				<div class="logo z">
+					<h1><a href="index.html"><img src="/static/pic/images/logo.jpg" alt="HTML+CSS实战"/></a></h1>
+				</div>
+				<div class="tel y">
+					<span>联系叔叔：13585536647</span>
+				</div>
+				<div class="search y">
+					<form action="index.html" method="POST">
+						<table class="sreach-table"cellpadding="0" cellspacing="0">
+							<tr>
+								<td class="search_z z"></td>
+								<td class="search_c z">
+									<input type="text" name="text" id="search_c"/>
+								</td>
+								<td class="search_y z">
+									<button type="submit" name="sumit"></button>
+								</td>
+							</tr>					
+						</table>
+					</form>
+				</div>			
+			</div>	
+		</div>
+		<div class="nav">
+			<div class="wp">
+			  <ul>
+			  	<li class="a">
+			  		<a href="index.html">网站首页</a>
+			  	</li>
+			  	<li>
+			  		<a href="index.html">公司简介</a>
+			  	</li>
+			  	<li>
+			  		<a href="index.html">业务描述</a>
+			  	</li>
+			  	<li>
+			  		<a href="index.html">服务范围</a>
+			  	</li>
+			  	<li>
+			  		<a href="index.html">产品中心</a>
+			  	</li>
+			  	<li>
+			  		<a href="index.html">人才首页</a>
+			  	</li>
+			  	<li>
+			  		<a href="index.html">在线留言</a>
+			  	</li>
+			  	<li>
+			  		<a href="index.html">联系我们</a>
+			  	</li>
+			  </ul>
+			</div>
+		</div>
+	</div>
+	<div class="center">
+		<div class="wp">
+			<div class="ad">
+					<a herf="index.html"><img src="/static/pic/images/banner.jpg" alt="这里是banner" width="960px"
+				height="275px"/></a>		
+			</div>
+		    <div class="intro z">
+		    	<div class="title">
+		    		<img src="/static/pic/images/intro.jpg" alt="公司简介">
+		    		<span><a href="">More</a></span>
+		    	</div>
+		    	<div class="intro_content">
+		    		<img src="/static/pic/images/gongsi.jpg" alt="公司" width="200px" height="111px" class="y"/>
+
+					<p>
+		    	    瀑布的水逆流而上<br>
+                    蒲公英种子从远处飘回，聚成伞的模样，<br>
+                    太阳从西边升起，落向东方。<br>
+		    	    </p>
+		    	    <p>
+		    	    子弹退回枪膛，<br>
+                    运动员回到起跑线，<br>
+                    我交回录取通知书，忘了十年寒窗。<br>
+		    	    </p>
+		    	    <p>
+		    	    厨房里飘来饭菜的香，<br>
+                    你把我的卷子签好名字，关掉电视，<br>
+                    帮我把书包背上。<br>
+		    	    </p>
+		    	    <p>
+		    	    你还在我身旁。
+		    	    </p>
+		    	</div>
+		    </div>
+		    <div class="news z">
+		    	<div class="title">
+		    		<img src="/static/pic/images/news.jpg" alt="公司新闻">
+		    		<span><a href="">More</a></span>
+		    	</div>
+		    	<div class="news_c">
+		    		<ul>
+		    			<li class="a">
+		    				<a href="">
+		    				    <img src="/static/pic/images/xinwen.jpg" alt="新闻图片" width="100px" height="90px"/>
+		    				    <h3>叔叔最爱baby了！</h3>
+		    				    <p>这不是废话嘛！还用你说！！！叔叔最最最最最最最爱小baby了！！！！！</p>
+		    				</a>
+		    			</li>
+						{% for post in blogs %}
+		    			<li>
+		    				<a href="">
+		    					<h3>{{ post.title }}</h3>
+		    					<span>2017年5月22日</span>
+		    				</a>
+		    			</li>
+						{% endfor %}
+		    			<!--
+						<li>
+		    				<a href="">
+		    					<h3>叔叔最爱baby了！</h3>
+		    					<span>2017年5月22日</span>
+		    				</a>
+		    			</li>
+		    			<li>
+		    				<a href="">
+		    					<h3>叔叔最爱baby了！</h3>
+		    					<span>2017年5月22日</span>
+		    				</a>
+		    			</li>
+		    			<li>
+		    				<a href="">
+		    					<h3>叔叔最爱baby了！</h3>
+		    					<span>2017年5月22日</span>
+		    				</a>
+		    			</li>
+		    			<li>
+		    				<a href="">
+		    					<h3>叔叔最爱baby了！</h3>
+		    					<span>2017年5月22日</span>
+		    				</a>
+		    			</li>
+		    			<li>
+		    				<a href="">
+		    					<h3>叔叔最爱baby了！</h3>
+		    					<span>2017年5月22日</span>
+		    				</a>
+		    			</li>
+		    			<li>
+		    				<a href="">
+		    					<h3>叔叔最爱baby了！</h3>
+		    					<span>2017年5月22日</span>
+		    				</a>
+		    			</li>
+		    			-->
+		    		</ul>
+		    	</div>
+		    </div>
+		    <div class="product z">
+		    	<div class="title">
+		    		<img src="/static/pic/images/product.jpg" alt="公司产品">
+		    		<span><a href="">More</a></span>
+		    	</div>
+		    	<div class="product_c">
+		    		<ul>
+						{% for img in imgs %}
+		    			<li>
+		    				<a href="">
+		    					<img src="{{ img.img.url }}" alt="图片" height="130px" width="220px"/>
+		    					<span>叔叔最爱baby了</span>
+		    				</a>
+		    			</li>
+						{% endfor %}
+						<!--
+		    			<li>
+		    				<a href="">
+		    					<img src="/static/images/123.jpg" alt="图片" height="130px" width="220px"/>
+		    					<span>叔叔最爱baby了</span>
+		    				</a>
+		    			</li>
+		    			<li>
+		    				<a href="">
+		    					<img src="/static/images/123.jpg" alt="图片" height="130px" width="220px"/>
+		    					<span>叔叔最爱baby了</span>
+		    				</a>
+		    			</li>
+		    			<li>
+		    				<a href="">
+		    					<img src="/static/images/123.jpg" alt="图片" height="130px" width="220px"/>
+		    					<span>叔叔最爱baby了</span>
+		    				</a>
+		    			</li>
+		    			<li>
+		    				<a href="">
+		    					<img src="/static/images/123.jpg" alt="图片" height="130px" width="220px"/>
+		    				    <span>叔叔最爱baby了</span>
+		    				</a>
+		    				
+		    			</li>
+		    			<li>
+		    				<a href="">
+		    					<img src="/static/images/123.jpg" alt="图片" height="130px" width="220px"/>
+		    				    <span>叔叔最爱baby了</span>
+		    				</a>
+		    			</li>
+		    			<li>
+		    				<a href="">
+		    					<img src="/static/images/123.jpg" alt="图片" height="130px" width="220px"/>
+		    					<span>叔叔最爱baby了</span>
+		    				</a>
+		    			</li>
+		    			<li>
+		    				<a href="">
+		    					<img src="/static/images/123.jpg" alt="图片" height="130px" width="220px"/>
+		    					<span>叔叔最爱baby了</span>
+		    				</a>
+		    			</li>
+		    			-->
+		    		</ul>
+		    	</div>
+		    </div>
+		</div>
+	</div>
+	<div class="cl"></div>
+	<div class="footer">
+		<div class="wp">
+			<div class="footer_top">
+				<span class="z">
+					<a href="">关于我们 </a>  |
+					<a href=""> 联系我们 </a>  |
+					<a href=""> 加入我们 </a>  |
+					<a href=""> 给我留言</a>  
+				</span>
+				<span class="y">版权</span>
+		    </div>
+		    <div class="footer_bottom">
+		    	<p>
+		    	    友情链接：  <a href="" target="_blank">叔叔网</a><a href="" target="_blank">baby网</a>
+		    	</p>
+		    </div>
+		</div>	
+	</div>
+	<div class="fudong">
+		<img src="/static/pic/images/weixin.jpg"/>
+	</div>
+</body>
+</html>

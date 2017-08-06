@@ -13,7 +13,7 @@
             <label for="{{ form.name.id_for_label }}">标签：</label>
                 {% for tag in tags %}
                 <input type="radio" name="tag" id="tag{{ forloop.counter }}" value="{{ tag.id }}" />
-                <label for="tag{{ forloop.counter }}">{{ tag.name }}</label><br />
+                <label for="tag{{ forloop.counter }}">{{ tag.name }}</label>
                 {% endfor %}
             </div>
         <button type="submit" >上传</button>

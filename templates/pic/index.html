@@ -22,76 +22,29 @@
 				</div>
 				<div id="gallery-header-center-right">
 					<div class="gallery-header-center-right-links" id="filter-all">所有</div>
-					<div class="gallery-header-center-right-links" id="filter-studio">工作室</div>
-					<div class="gallery-header-center-right-links" id="filter-landscape">景观</div>
+					<div class="gallery-header-center-right-links" id="filter-studio">baby</div>
+					<div class="gallery-header-center-right-links" id="filter-landscape">叔叔</div>
 				</div>
 			</div>
 		</div>
 		<div id="gallery-content">
 			<div id="gallery-content-center">
 				{% for img in imgs %}
-					<a href="{{ img.img.url }}" ><img src='{{ img.img.url }}' class="all studio"/></a>
+
+					<a href="{{ img.img.url }}" ><img src='{{ img.img.url }}' class='all {{ img.tag.name }}' /></a>
 				{% empty %}
 						<div class="no-post">暂时还没有图片！</div>
 				{% endfor %}
-				<img src="/static/pic/_assets/mm1.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape1.jpg" class="all landscape">
-				<img src="/static/pic/_assets/mm2.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/mm17.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape2.jpg" class="all landscape">
-				<img src="/static/pic/_assets/mm3.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/studio3.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape3.jpg" class="all landscape">
-				<img src="/static/pic/_assets/mm4.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/studio4.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape4.jpg" class="all landscape">
-				<img src="/static/pic/_assets/mm5.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape5.jpg" class="all landscape">
-				<img src="/static/pic/_assets/studio6.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape6.jpg" class="all landscape">
-				<img src="/static/pic/_assets/mm6.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape7.jpg" class="all landscape">
-				<img src="/static/pic/_assets/mm16.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape8.jpg" class="all landscape">
-				<img src="/static/pic/_assets/mm7.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape9.jpg" class="all landscape">
-				<img src="/static/pic/_assets/studio10.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape10.jpg" class="all landscape">
-				<img src="/static/pic/_assets/mm8.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape11.jpg" class="all landscape">
-				<img src="/static/pic/_assets/studio12.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape12.jpg" class="all landscape">
-				<img src="/static/pic/_assets/mm15.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape13.jpg" class="all landscape">
-				<img src="/static/pic/_assets/mm9.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape14.jpg" class="all landscape">
-				<img src="/static/pic/_assets/mm10.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape15.jpg" class="all landscape">
-				<img src="/static/pic/_assets/studio16.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape16.jpg" class="all landscape">
-				<img src="/static/pic/_assets/mm1.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape17.jpg" class="all landscape">
-				<img src="/static/pic/_assets/studio18.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/landscape18.jpg" class="all landscape">
-				<img src="/static/pic/_assets/studio19.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/studio20.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/mm12.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/mm13.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/studio23.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/mm14.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/mm18.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/mm19.jpg" class="all studio"/>
-				<img src="/static/pic/_assets/mm20.jpg" class="all studio"/>
 			</div>
 		</div>
 	</div>
 
-	<script type="text/javascript" src="/static/pic/js/jquery.min.js"></script>
-	<script type="text/javascript" src="/static/pic/js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="/static/pic/js/jquery.isotope.min.js"></script>
-	<script type="text/javascript" src="/static/pic/js/animated-masonry-gallery.js"></script>
+	<script type="text/javascript" src="/static/pic/js/jquery.min.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="/static/pic/js/jquery-ui.min.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="/static/pic/js/jquery.isotope.min.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="/static/pic/js/animated-masonry-gallery.js" charset="UTF-8"></script>
 	<div style="text-align:center;">
-<p>更多源码：<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
+
 </div>
 </body>
 </html>
