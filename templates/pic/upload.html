@@ -6,7 +6,7 @@
 </head>
 <body>
     {% if text %}<p><strong>{{ text }}</strong></p>{% endif %}
-    <form action="{% url 'img:uploadpage' %}" enctype="multipart/form-data" method="post">
+    <form action="{% url 'img:done' %}" enctype="multipart/form-data" method="post">
         {% csrf_token %}
         <input type="file" name="img">
         <div class="col-md-4">
@@ -15,7 +15,9 @@
                 <input type="radio" name="tag" id="tag{{ forloop.counter }}" value="{{ tag.id }}" />
                 <label for="tag{{ forloop.counter }}">{{ tag.name }}</label>
                 {% endfor %}
-            </div>
+        </div>
+        标题：<input type="text" name="title"></br>
+        描述：<input type="text" name="description"></br>
         <button type="submit" >上传</button>
     </form>
 </body>

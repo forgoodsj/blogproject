@@ -9,6 +9,42 @@
 	<link rel="stylesheet" type="text/css" href="css/default.css">
 	<link href="/static/pic/css/Icomoon/style.css" rel="stylesheet" type="text/css" />
 	<link href="/static/pic/css/animated-masonry-gallery.css" rel="stylesheet" type="text/css" />
+	<!-- Normalize -->
+
+	<link rel="stylesheet" href="/static/pic/css/assets/normalize.css" type="text/css">
+
+	<!-- Bootstrap -->
+
+	<link href="/static/pic/css/assets/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Font-awesome.min -->
+
+	<link href="/static/pic/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Effet -->
+
+	<link rel="stylesheet" href="/static/pic/css/gallery/foundation.min.css"  type="text/css">
+	<link rel="stylesheet" type="text/css" href="/static/pic/css/gallery/set1.css" />
+
+	<!-- Main Style -->
+
+	<link rel="stylesheet" href="/static/pic/css/main.css" type="text/css">
+
+	<!-- Responsive Style -->
+
+	<link href="/static/pic/css/responsive.css" rel="stylesheet" type="text/css">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+
+	<!--[if lt IE 9]>
+
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+		<![endif]-->
+
+	<script src="/static/pic/js/assets/modernizr-2.8.3.min.js" type="text/javascript"></script>
 	
 </head>
 <body>
@@ -27,6 +63,9 @@
 				</div>
 			</div>
 		</div>
+		</div>
+
+
 		<div id="gallery-content">
 			<div id="gallery-content-center">
 				{% for img in imgs %}
@@ -39,12 +78,46 @@
 		</div>
 	</div>
 
+<!--
+	<div class="wrapper">
+    <div class="">
+      <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3 masonry">
+		  {% for img in imgs %}
+          <li class="masonry-item grid">
+              <figure class="effect-sarah"><a href="{{ img.img.url }}" > <img src="{{ img.img.url }}" alt="" class='all {{ img.tag.name }}'/></a>
+                  <figcaption>
+				  <h2>{{ img.title }}</h2>
+				  <p>{{ img.description }}</p>
+				  <a href="{{ img.img.url }}">View more</a> </figcaption>
+			  </figure>
+			</li>
+		  {% empty %}
+		      <div class="no-post">暂时还没有图片！</div>
+		  {% endfor %}
+		  </ul>
+		</div>
+-->
 	<script type="text/javascript" src="/static/pic/js/jquery.min.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="/static/pic/js/jquery-ui.min.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="/static/pic/js/jquery.isotope.min.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="/static/pic/js/animated-masonry-gallery.js" charset="UTF-8"></script>
+
 	<div style="text-align:center;">
 
 </div>
 </body>
+<script src="/static/pic/js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/assets/jquery.min.js"><\/script>')</script>
+<script src="/static/pic/js/assets/plugins.js" type="text/javascript"></script>
+<script src="/static/pic/js/assets/bootstrap.min.js" type="text/javascript"></script>
+
+<script src="/static/pic/js/maps.js" type="text/javascript"></script>
+<script src="/static/pic/js/custom.js" type="text/javascript"></script>
+<script src="/static/pic/js/jquery.contact.js" type="text/javascript"></script>
+<script src="/static/pic/js/main.js" type="text/javascript"></script>
+<script src="/static/pic/js/gallery/masonry.pkgd.min.js" type="text/javascript"></script>
+<script src="/static/pic/js/gallery/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+<script src="/static/pic/js/gallery/jquery.infinitescroll.min.js" type="text/javascript"></script>
+<script src="/static/pic/js/gallery/main.js" type="text/javascript"></script>
+<script src="/static/pic/js/jquery.nicescroll.min.js" type="text/javascript"></script>
 </html>

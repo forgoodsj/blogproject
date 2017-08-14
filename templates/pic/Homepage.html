@@ -4,6 +4,7 @@
 <link rel="stylesheet" type="text/css" href="/static/pic/css/style.css">
 <title></title>
 </head>
+
 <body>
 	<div class="header">
 		<div class="top">
@@ -51,13 +52,13 @@
 			<div class="wp">
 			  <ul>
 			  	<li class="a">
-			  		<a href="index.html">网站首页</a>
+			  		<a href="{% url 'homepage' %}">网站首页</a>
 			  	</li>
 			  	<li>
-			  		<a href="index.html">公司简介</a>
+			  		<a href="{% url 'blog:index' %}">博客</a>
 			  	</li>
 			  	<li>
-			  		<a href="index.html">业务描述</a>
+			  		<a href="{% url 'img:show' %}">照片</a>
 			  	</li>
 			  	<li>
 			  		<a href="index.html">服务范围</a>
@@ -78,6 +79,8 @@
 			</div>
 		</div>
 	</div>
+
+
 	<div class="center">
 		<div class="wp">
 			<div class="ad">
@@ -115,132 +118,52 @@
 		    <div class="news z">
 		    	<div class="title">
 		    		<img src="/static/pic/images/news.jpg" alt="公司新闻">
-		    		<span><a href="">More</a></span>
+		    		<span><a href="{% url 'homepage' %}">More</a></span>
 		    	</div>
 		    	<div class="news_c">
 		    		<ul>
 		    			<li class="a">
+							<!--
 		    				<a href="">
 		    				    <img src="/static/pic/images/xinwen.jpg" alt="新闻图片" width="100px" height="90px"/>
 		    				    <h3>叔叔最爱baby了！</h3>
 		    				    <p>这不是废话嘛！还用你说！！！叔叔最最最最最最最爱小baby了！！！！！</p>
 		    				</a>
+		    				-->
 		    			</li>
 						{% for post in blogs %}
 		    			<li>
-		    				<a href="">
+		    				<a href="{{ post.get_absolute_url }}">
 		    					<h3>{{ post.title }}</h3>
 		    					<span>2017年5月22日</span>
 		    				</a>
 		    			</li>
 						{% endfor %}
-		    			<!--
-						<li>
-		    				<a href="">
-		    					<h3>叔叔最爱baby了！</h3>
-		    					<span>2017年5月22日</span>
-		    				</a>
-		    			</li>
-		    			<li>
-		    				<a href="">
-		    					<h3>叔叔最爱baby了！</h3>
-		    					<span>2017年5月22日</span>
-		    				</a>
-		    			</li>
-		    			<li>
-		    				<a href="">
-		    					<h3>叔叔最爱baby了！</h3>
-		    					<span>2017年5月22日</span>
-		    				</a>
-		    			</li>
-		    			<li>
-		    				<a href="">
-		    					<h3>叔叔最爱baby了！</h3>
-		    					<span>2017年5月22日</span>
-		    				</a>
-		    			</li>
-		    			<li>
-		    				<a href="">
-		    					<h3>叔叔最爱baby了！</h3>
-		    					<span>2017年5月22日</span>
-		    				</a>
-		    			</li>
-		    			<li>
-		    				<a href="">
-		    					<h3>叔叔最爱baby了！</h3>
-		    					<span>2017年5月22日</span>
-		    				</a>
-		    			</li>
-		    			-->
 		    		</ul>
 		    	</div>
 		    </div>
 		    <div class="product z">
 		    	<div class="title">
 		    		<img src="/static/pic/images/product.jpg" alt="公司产品">
-		    		<span><a href="">More</a></span>
+		    		<span><a href="{% url 'img:show' %}">More</a></span>
 		    	</div>
 		    	<div class="product_c">
 		    		<ul>
 						{% for img in imgs %}
 		    			<li>
-		    				<a href="">
-		    					<img src="{{ img.img.url }}" alt="图片" height="130px" width="220px"/>
-		    					<span>叔叔最爱baby了</span>
+		    				<a href="img/{{ img.img.url }}">
+		    					<img src="img/{{ img.img.url }}" alt="图片" height="130px"/>
+		    					<span>{{ img.title }}</span>
 		    				</a>
 		    			</li>
 						{% endfor %}
-						<!--
-		    			<li>
-		    				<a href="">
-		    					<img src="/static/images/123.jpg" alt="图片" height="130px" width="220px"/>
-		    					<span>叔叔最爱baby了</span>
-		    				</a>
-		    			</li>
-		    			<li>
-		    				<a href="">
-		    					<img src="/static/images/123.jpg" alt="图片" height="130px" width="220px"/>
-		    					<span>叔叔最爱baby了</span>
-		    				</a>
-		    			</li>
-		    			<li>
-		    				<a href="">
-		    					<img src="/static/images/123.jpg" alt="图片" height="130px" width="220px"/>
-		    					<span>叔叔最爱baby了</span>
-		    				</a>
-		    			</li>
-		    			<li>
-		    				<a href="">
-		    					<img src="/static/images/123.jpg" alt="图片" height="130px" width="220px"/>
-		    				    <span>叔叔最爱baby了</span>
-		    				</a>
-		    				
-		    			</li>
-		    			<li>
-		    				<a href="">
-		    					<img src="/static/images/123.jpg" alt="图片" height="130px" width="220px"/>
-		    				    <span>叔叔最爱baby了</span>
-		    				</a>
-		    			</li>
-		    			<li>
-		    				<a href="">
-		    					<img src="/static/images/123.jpg" alt="图片" height="130px" width="220px"/>
-		    					<span>叔叔最爱baby了</span>
-		    				</a>
-		    			</li>
-		    			<li>
-		    				<a href="">
-		    					<img src="/static/images/123.jpg" alt="图片" height="130px" width="220px"/>
-		    					<span>叔叔最爱baby了</span>
-		    				</a>
-		    			</li>
-		    			-->
 		    		</ul>
 		    	</div>
 		    </div>
 		</div>
 	</div>
 	<div class="cl"></div>
+
 	<div class="footer">
 		<div class="wp">
 			<div class="footer_top">

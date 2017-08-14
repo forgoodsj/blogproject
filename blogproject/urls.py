@@ -19,8 +19,9 @@ from img import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'',include('blog.urls')),
-    url(r'', include('comments.urls')),
-    url(r'', include('img.urls')),
+    url(r'^blog/',include('blog.urls')),
+    url(r'^comtents/', include('comments.urls')),
+    url(r'^img/', include('img.urls')),
     url(r'^index', views.homePage, name='homepage'),
+    url(r'^$', views.homePage, name='homepage'),
 ]

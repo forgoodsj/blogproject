@@ -9,7 +9,7 @@ from django.contrib import admin
 
 
 #@python_2_unicode_compatible
-class Tag(models.Model):
+class ImgTag(models.Model):
     name = models.CharField(max_length=250)
 
     def __unicode__(self):
@@ -17,7 +17,7 @@ class Tag(models.Model):
 
 #@python_2_unicode_compatible
 class Img(models.Model):
-    tag = models.ForeignKey('Tag')
+    tag = models.ForeignKey('ImgTag')
     title = models.CharField(max_length=100,blank=True)
     description = models.TextField(blank=True)
     img = models.ImageField(upload_to='upload')
